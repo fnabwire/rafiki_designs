@@ -22,31 +22,31 @@ const Header = () => {
   return (
     <>
       {/* Main Header */}
-      <header className={`header${isScrolled ? " hidden" : ""}`}>
-        <nav className={`header-nav${isMenuOpen ? " open" : ""}`}>
-          <ul className="menu">
-            <li><Link to="/home" className="header-nav-link">Home</Link></li>
-            <li><Link to="/about" className="header-nav-link">About</Link></li>
-            <li><Link to="/portfolio" className="header-nav-link">Portfolio</Link></li>
-          </ul>
-        </nav>
-      </header>
+        <header className={`w-full fixed top-0 left-0 z-50 transition-all${isScrolled ? " hidden" : ""} bg-background shadow-md`}>
+          <nav className={`flex justify-between items-center px-6 py-4${isMenuOpen ? "" : ""}`}>
+            <ul className="flex space-x-6">
+              <li><Link to="/home" className="text-primary hover:text-secondary font-semibold transition-colors">Home</Link></li>
+              <li><Link to="/about" className="text-primary hover:text-secondary font-semibold transition-colors">About</Link></li>
+              <li><Link to="/portfolio" className="text-primary hover:text-secondary font-semibold transition-colors">Portfolio</Link></li>
+            </ul>
+          </nav>
+        </header>
 
       {/* Floating Waffle Menu */}
-      <button className="floating-menu" onClick={toggleMenu} aria-label="Open menu">
-        <FontAwesomeIcon icon={faBars} className="waffle-icon" />
-      </button>
+        <button className="fixed top-6 right-6 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-secondary transition-colors" onClick={toggleMenu} aria-label="Open menu">
+          <FontAwesomeIcon icon={faBars} className="text-xl" />
+        </button>
 
       {/* Mobile Navigation (appears when menu is open) */}
-      {isMenuOpen && (
-        <div className="mobile-nav">
-          <ul>
-            <li><Link to="/home" onClick={() => setIsMenuOpen(false)}>Home</Link></li>
-            <li><Link to="/about" onClick={() => setIsMenuOpen(false)}>About</Link></li>
-            <li><Link to="/portfolio" onClick={() => setIsMenuOpen(false)}>Portfolio</Link></li>
-          </ul>
-        </div>
-      )}
+        {isMenuOpen && (
+          <div className="fixed top-0 right-0 w-2/3 h-full bg-background shadow-lg flex flex-col items-center pt-20 z-50">
+            <ul className="space-y-8">
+              <li><Link to="/home" className="text-primary hover:text-secondary text-lg font-bold" onClick={() => setIsMenuOpen(false)}>Home</Link></li>
+              <li><Link to="/about" className="text-primary hover:text-secondary text-lg font-bold" onClick={() => setIsMenuOpen(false)}>About</Link></li>
+              <li><Link to="/portfolio" className="text-primary hover:text-secondary text-lg font-bold" onClick={() => setIsMenuOpen(false)}>Portfolio</Link></li>
+            </ul>
+          </div>
+        )}
     </>
   );
 };

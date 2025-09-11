@@ -16,19 +16,21 @@ export default function PortfolioSection() {
   const { ref } = useInView({ triggerOnce: true });
 
   return (
-    <section ref={ref} className="bg-[#032825] p-6 rounded-md">
-      <h2 className="text-2xl font-bold mb-4 text-[#98760B] text-center">Latest Projects</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 p-2 justify-center">
+    <section ref={ref} id="projects" className="bg-background py-12">
+      <h2 className="text-3xl font-bold mb-10 text-secondary text-center">Projects</h2>
+      <div className="flex flex-col gap-8 items-center">
         {projects.map((project) => (
-          <div key={project.id} className="text-center text-white p-2">
-            <img src={project.image} alt={`Project ${project.id}`} className="w-full max-w-xs mx-auto rounded-md" />
+          <div key={project.id} className="bg-white rounded-xl shadow-md flex flex-col md:flex-row items-center max-w-3xl w-full p-6">
+            <img src={project.image} alt={`Project ${project.id}`} className="w-20 h-20 object-cover rounded-lg mb-4 md:mb-0 md:mr-6" />
+            <div className="flex-1 flex flex-col items-start">
+              <h3 className="text-xl font-bold text-secondary mb-2">Project Name</h3>
+              <p className="text-gray-600 mb-4">Short description. You can add details about the project here.</p>
+              <a className="px-4 py-2 border-2 border-primary rounded-md font-semibold text-primary transition-all duration-300 hover:bg-primary hover:text-white" href="#" rel="noopener noreferrer">
+                View Project
+              </a>
+            </div>
           </div>
         ))}
-      </div>
-      <div className="flex justify-center gap-4 mt-6">
-        <a className="inline-block px-5 py-2 bg-[#98760B] text-[#f5f5dc] rounded-md font-semibold no-underline transition-colors duration-300 hover:bg-[#bfa14d]" href="/portfolio" rel="noopener noreferrer">
-          Explore More Projects
-        </a>
       </div>
     </section>
   );

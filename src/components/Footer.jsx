@@ -3,8 +3,8 @@ import BackToTop from './BackToTop';
 
 export default function Footer() {
   return (
-    <footer style={footerStyle}>
-      <div style={containerStyle}>
+    <footer className="bg-secondary text-white py-2">
+      <div className="max-w-4xl mx-auto px-5 text-center">
         <p>&copy; {new Date().getFullYear()} John Juma. All rights reserved.</p>
       </div>
       <BackToTop />
@@ -12,15 +12,4 @@ export default function Footer() {
   );
 }
 
-const footerStyle = {
-  backgroundColor: '#98760B',
-  color: 'white',
-  padding: '10px 0',
-};
-
-const containerStyle = {
-  maxWidth: '1000px',
-  margin: '0 auto',
-  padding: '0 20px',
-  textAlign: 'center',
-};
+// ...existing code...

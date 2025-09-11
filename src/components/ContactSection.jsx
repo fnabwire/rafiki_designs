@@ -4,71 +4,31 @@ import { faHome, faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 const ContactSection = () => {
   return (
-    <section id="ContactSection">
-      <div style={contactSectionStyle}>
-        <div className="contact-container" style={contactContainerStyle}>
+    <section id="ContactSection" className="bg-background py-10">
+      <div className="max-w-3xl mx-auto px-5">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-8">
           {/* Address */}
-          <div className="contact-item" style={contactItemStyle}>
-            <FontAwesomeIcon icon={faHome} className="icon" style={iconStyle} />
-            <strong className="title" style={titleStyle}>My Address</strong>
-            <p className="text" style={textStyle}>Nairobi, Kenya</p>
+          <div className="flex flex-col items-center bg-secondary text-white rounded-lg p-6 shadow-md w-full md:w-1/3">
+            <FontAwesomeIcon icon={faHome} className="text-3xl mb-2" />
+            <strong className="text-lg font-bold mb-1">My Address</strong>
+            <p className="text-base">Nairobi, Kenya</p>
           </div>
-
           {/* Phone */}
-          <div className="contact-item" style={contactItemStyle}>
-            <FontAwesomeIcon icon={faPhone} className="icon" style={iconStyle} />
-            <strong className="title" style={titleStyle}>Give Me a Call</strong>
-            <p className="text" style={textStyle}>+254 746 981 845</p>
+          <div className="flex flex-col items-center bg-secondary text-white rounded-lg p-6 shadow-md w-full md:w-1/3">
+            <FontAwesomeIcon icon={faPhone} className="text-3xl mb-2" />
+            <strong className="text-lg font-bold mb-1">Give Me a Call</strong>
+            <p className="text-base">+254 746 981 845</p>
           </div>
-
           {/* Email */}
-          <div className="contact-item" style={contactItemStyle}>
-            <FontAwesomeIcon icon={faEnvelope} className="icon" style={iconStyle} />
-            <strong className="title" style={titleStyle}>Send Me an Email</strong>
-            <p className="text" style={textStyle}>jumaelectricals@gmail.com</p>
+          <div className="flex flex-col items-center bg-secondary text-white rounded-lg p-6 shadow-md w-full md:w-1/3">
+            <FontAwesomeIcon icon={faEnvelope} className="text-3xl mb-2" />
+            <strong className="text-lg font-bold mb-1">Send Me an Email</strong>
+            <p className="text-base">jumaelectricals@gmail.com</p>
           </div>
         </div>
       </div>
     </section>
   );
-};
-
-const contactSectionStyle = {
-  backgroundColor: "#032825",
-  color: "white",
-  padding: "40px",
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  textAlign: "center",
-};
-
-const contactContainerStyle = {
-  display: "flex",
-  gap: "180px",
-  justifyContent: "center",
-  flexWrap: "wrap",
-};
-
-const contactItemStyle = {
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  maxWidth: "200px",
-};
-
-const iconStyle = {
-  fontSize: "30px",
-  color: "#98760B",
-  marginBottom: "10px",
-};
-
-const titleStyle = {
-  fontSize: "18px",
-};
-
-const textStyle = {
-  marginTop: "5px",
 };
 
 export default ContactSection;

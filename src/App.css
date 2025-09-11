@@ -1,3 +1,8 @@
+ :root {
+  --color-primary: #DC7049;
+  --color-secondary: #586234;
+  --color-background: #F8FAFD;
+ }
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -49,8 +54,8 @@
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #98760b;
-  color: #032825;
+  background-color: var(--color-secondary);
+  color: var(--color-background);
   padding: 15px 20px;
   border-radius: 8px;
   border: none;
@@ -61,7 +66,7 @@
 }
 
 .back-to-top:hover {
-  background-color: #f5f5dc;
+  background-color: var(--color-background);
 }
 
 .back-to-top.show {
@@ -69,7 +74,7 @@
 }
 
 .back-to-top .fa-chevron-up {
-  color: #032825;
+  color: var(--color-secondary);
   font-size: 20px;
 }
 

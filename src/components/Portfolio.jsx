@@ -125,13 +125,13 @@ export default function Portfolio() {
   }, {});
 
   return (
-    <section ref={ref} className="bg-[#032825] p-8 md:p-16 rounded-md">
+    <section ref={ref} className="bg-background p-8 md:p-16 rounded-md">
       {/* Category Buttons */}
       <div className="flex justify-center gap-2 flex-wrap mb-6">
         {categories.map(category => (
           <button
             key={category}
-            className={`px-4 py-2 rounded-md font-semibold transition-colors duration-300 ${selectedCategory === category ? 'bg-[#f5f5dc] text-black' : 'bg-[#98760B] text-white hover:bg-[#bfa14d]'}`}
+            className={`px-4 py-2 rounded-md font-semibold transition-colors duration-300 ${selectedCategory === category ? 'bg-background text-secondary' : 'bg-primary text-white hover:bg-secondary'}`}
             onClick={() => setSelectedCategory(category)}
           >
             {category}
@@ -141,10 +141,10 @@ export default function Portfolio() {
       {/* Display projects by category */}
       {Object.entries(projectsByCategory).map(([category, categoryProjects]) => (
         <div key={category} className={category === selectedCategory || selectedCategory === 'All' ? '' : 'hidden'}>
-          <h2 className="text-[#f5f5dc] text-xl font-bold mt-6 mb-4 text-center">{category}</h2>
+          <h2 className="text-secondary text-xl font-bold mt-6 mb-4 text-center">{category}</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
             {categoryProjects.map(project => (
-              <div key={project.id} className="m-2 text-center text-white">
+              <div key={project.id} className="m-2 text-center text-secondary">
                 <img
                   src={project.image}
                   alt={`Project ${project.id}`}
