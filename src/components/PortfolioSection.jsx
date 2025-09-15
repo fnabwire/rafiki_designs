@@ -1,36 +1,86 @@
 import React from 'react';
-import { useInView } from 'react-intersection-observer';
-import image43 from '../images/image43.jpg';
-import image53 from '../images/image53.jpg';
-import image15 from '../images/image15.jpg';
-import image27 from '../images/image27.jpg';
+import artImage from '../images/art.jpg';
 
+// Using placeholder images to replicate the visual design from the example.
 const projects = [
-  { id: 1, image: image43 },
-  { id: 2, image: image53 },
-  { id: 3, image: image15 },
-  { id: 4, image: image27 },
+  {
+    id: 1,
+    image: artImage,
+    title: "Project Name",
+    desc: "I created this personal project in order to show basic features and processes in programming a portfolio as an example.",
+    reverse: false,
+  },
+  {
+    id: 2,
+    image: artImage,
+    title: "Project Name",
+    desc: "Work area: your view, deliverables, if any and your personal framework.",
+    reverse: true,
+  },
+  {
+    id: 3,
+    image: artImage,
+    title: "Project Name",
+    desc: "Written details and a little description on the basis of the project. If you want to show, profile, details, etc.",
+    reverse: false,
+  },
+  {
+    id: 4,
+    image: artImage,
+    title: "Project Name",
+    desc: "More details about the project can be added here.",
+    reverse: true,
+  },
 ];
 
 export default function PortfolioSection() {
-  const { ref } = useInView({ triggerOnce: true });
-
   return (
-    <section ref={ref} id="projects" className="bg-background py-12">
-      <h2 className="text-3xl font-bold mb-10 text-secondary text-center">Projects</h2>
-      <div className="flex flex-col gap-8 items-center">
-        {projects.map((project) => (
-          <div key={project.id} className="bg-white rounded-xl shadow-md flex flex-col md:flex-row items-center max-w-3xl w-full p-6">
-            <img src={project.image} alt={`Project ${project.id}`} className="w-20 h-20 object-cover rounded-lg mb-4 md:mb-0 md:mr-6" />
-            <div className="flex-1 flex flex-col items-start">
-              <h3 className="text-xl font-bold text-secondary mb-2">Project Name</h3>
-              <p className="text-gray-600 mb-4">Short description. You can add details about the project here.</p>
-              <a className="px-4 py-2 border-2 border-primary rounded-md font-semibold text-primary transition-all duration-300 hover:bg-primary hover:text-white" href="#" rel="noopener noreferrer">
-                View Project
-              </a>
+    <section id="projects" className="min-h-screen bg-gray-100 p-8 font-sans">
+      {/* Tailwind CSS CDN, placed here for demonstration */}
+      <script src="https://cdn.tailwindcss.com"></script>
+      <div className="container mx-auto max-w-4xl py-12">
+        {/* Header Section */}
+        <div className="flex flex-col items-center mb-12">
+          <h1 className="text-4xl font-bold text-gray-800">
+            <span className="relative inline-block pb-1">
+              Projects
+              <span className="absolute bottom-0 left-0 w-full h-1 bg-yellow-400"></span>
+            </span>
+          </h1>
+        </div>
+
+        {/* Projects Grid */}
+        <div className="space-y-12">
+          {projects.map((project) => (
+            <div
+              key={project.id}
+              className={`flex flex-col md:flex-row items-center bg-white rounded-xl shadow-lg overflow-hidden ${
+                project.reverse ? 'md:flex-row-reverse' : ''
+              } md:items-stretch`}
+            >
+              {/* Image Section */}
+              <div className="flex-shrink-0 flex items-center justify-center w-full md:w-1/3 p-4">
+                <img
+                  src={project.image}
+                  alt={`Project ${project.id}`}
+                  className="w-32 h-32 md:w-40 md:h-40 object-cover object-center rounded-lg shadow-md"
+                />
+              </div>
+
+              {/* Text Content Section */}
+              <div className="w-full md:w-2/3 p-6 flex flex-col justify-center">
+                <h2 className="text-2xl font-semibold text-gray-800 mb-2">{project.title}</h2>
+                <p className="text-gray-600 text-sm mb-4">{project.desc}</p>
+                <a
+                  href="#"
+                  className="inline-block self-start px-4 py-2 text-sm font-semibold text-gray-800 border border-gray-400 rounded-full transition-colors duration-300 hover:bg-gray-200"
+                >
+                  View Project
+                </a>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

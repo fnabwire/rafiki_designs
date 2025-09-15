@@ -22,7 +22,7 @@ const HeroSection = () => {
       <div className="flex-1 flex justify-center items-center relative mt-10 md:mt-0">
         <div className="relative w-22 h-22 flex items-center justify-center">
           <div className="absolute inset-0 rounded-full bg-primary" style={{ zIndex: 1 }}></div>
-          <img src="/src/images/hero.jpg" alt="About" className="absolute inset-0 w-8 h-8 object-cover object-center rounded-full z-10" />
+          <img src="/src/images/art.jpg" alt="About" className="absolute inset-0 w-6 h-6 object-cover object-center rounded-full z-10" />
         </div>
       </div>
     </section>

@@ -15,9 +15,9 @@ function HomePage() {
       {/* <About/> */}
       <HeroSection />
       {/* <AboutSection /> */}
-      {/* <PortfolioSection /> */}
+      <PortfolioSection /> 
       {/* <Testimonials /> */}
-      {/* <ContactSection /> */}
+      <ContactSection />
       <Footer />
     </div>
   );
