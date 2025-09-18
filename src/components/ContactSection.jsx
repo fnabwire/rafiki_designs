@@ -1,31 +1,95 @@
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome, faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import feather from 'feather-icons';
+
 
 const ContactSection = () => {
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true });
+    feather.replace();
+  }, []);
+
   return (
-  <section id="ContactSection" className="bg-[#F0F8FF] text-[#012169] py-10 flex flex-col items-center text-center border-t-4 border-[#0E97B9]">
-      <div className="flex gap-[130px] justify-center flex-wrap max-w-6xl w-full px-4">
-
-        {/* Address */}
-        <div className="flex flex-col items-center max-w-[200px]">
-          <FontAwesomeIcon icon={faHome} className="text-3xl text-[#0E97B9] mb-2" />
-          <strong className="text-lg">My Address</strong>
-          <p className="mt-1">Mombasa, Kenya</p>
+    <section id="contact" className="py-20 bg-background">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16" data-aos="fade-up">
+          <h2 className="text-4xl font-bold text-secondary mb-4">Let's Work Together</h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            Ready to bring your vision to life? Get in touch and let's discuss your next project.
+          </p>
         </div>
-
-        {/* Phone */}
-        <div className="flex flex-col items-center max-w-[200px]">
-          <FontAwesomeIcon icon={faPhone} className="text-3xl text-[#0E97B9] mb-2" />
-          <strong className="text-lg">Give Me a Call</strong>
-          <p className="mt-1">+254 704 186 266</p>
-        </div>
-
-        {/* Email */}
-        <div className="flex flex-col items-center max-w-[200px]">
-          <FontAwesomeIcon icon={faEnvelope} className="text-3xl text-[#0E97B9] mb-2" />
-          <strong className="text-lg">Send Me an Email</strong>
-          <p className="mt-1">franciscanabwire2@gmail.com</p>
+        <div className="grid md:grid-cols-2 gap-12">
+          <div data-aos="fade-right">
+            <form className="space-y-6">
+              <div>
+                <label className="block text-secondary font-semibold mb-2">Name</label>
+                <input type="text" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" />
+              </div>
+              <div>
+                <label className="block text-secondary font-semibold mb-2">Email</label>
+                <input type="email" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" />
+              </div>
+              <div>
+                <label className="block text-secondary font-semibold mb-2">Message</label>
+                <textarea rows="5" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" />
+              </div>
+              <button type="submit" className="bg-primary text-white px-8 py-3 rounded-lg hover:bg-opacity-90 transition-all">
+                Send Message
+              </button>
+            </form>
+          </div>
+          <div data-aos="fade-left">
+            <div className="bg-white p-8 rounded-lg shadow-lg">
+              <h3 className="text-2xl font-bold text-secondary mb-6">Contact Information</h3>
+              <div className="space-y-4">
+                <div className="flex items-center">
+                  <div className="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-4">
+                    <i data-feather="mail" className="text-primary"></i>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-500">Email</div>
+                    <div className="font-semibold text-secondary">hello@rafikidesigns.com</div>
+                  </div>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-4">
+                    <i data-feather="phone" className="text-primary"></i>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-500">Phone</div>
+                    <div className="font-semibold text-secondary">+254 725 637 846</div>
+                  </div>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-4">
+                    <i data-feather="map-pin" className="text-primary"></i>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-500">Location</div>
+                    <div className="font-semibold text-secondary">Nairobi, Kenya</div>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-8 pt-6 border-t border-gray-200">
+                <h4 className="text-lg font-semibold text-secondary mb-4">Follow Me</h4>
+                <div className="flex space-x-4">
+                  <a href="#" className="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-all">
+                    <i data-feather="instagram" className="text-primary hover:text-white"></i>
+                  </a>
+                  <a href="#" className="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-all">
+                    <i data-feather="twitter" className="text-primary hover:text-white"></i>
+                  </a>
+                  <a href="#" className="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-all">
+                    <i data-feather="linkedin" className="text-primary hover:text-white"></i>
+                  </a>
+                  <a href="#" className="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-all">
+                    <i data-feather="dribbble" className="text-primary hover:text-white"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

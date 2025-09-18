@@ -1,28 +1,40 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
 
 const HeroSection = () => {
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true });
+  }, []);
+
   return (
-    <section className="relative flex flex-col md:flex-row items-center justify-between min-h-[70vh] bg-background px-8 pt-16 pb-8">
-      <div className="flex-1 flex flex-col justify-center md:items-start items-center z-10 max-w-xl">
-        <h2 className="text-4xl font-bold mb-3 text-primary md:text-left text-center">About Me</h2>
-        <p className="text-base text-secondary mb-6 md:text-left text-center">
-          As a skilled graphic designer with hands-on experience in Canva, Photoshop, and other design tools, I excel at creating visually appealing and professional materials.
-          I am a highly organized and resourceful Virtual Assistant with proven expertise in time management, administrative support, and digital tools. My experience includes managing schedules, handling correspondence, designing marketing assets, and streamlining workflows to enhance productivity.
-        </p>
-        <a
-          className="px-6 py-2 bg-primary text-white rounded-md font-semibold transition-all duration-300 hover:bg-secondary w-fit"
-          href="https://drive.google.com/file/d/1Xki5QFwDpzc9czcjevyIx59olIsApLRC/view?usp=drivesdk"
-          download="JOHN JUMA_CV.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Download CV
-        </a>
-      </div>
-      <div className="flex-1 flex justify-center items-center relative mt-10 md:mt-0">
-        <div className="relative w-22 h-22 flex items-center justify-center">
-          <div className="absolute inset-0 rounded-full bg-primary" style={{ zIndex: 1 }}></div>
-          <img src="/src/images/art.jpg" alt="About" className="absolute inset-0 w-6 h-6 object-cover object-center rounded-full z-10" />
+    <section id="home" className="min-h-screen flex items-center pt-20 pb-16">
+      <div className="container mx-auto px-6">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div data-aos="fade-right">
+            <h1 className="text-5xl md:text-6xl font-bold text-secondary mb-6">
+              Creative Design <span className="text-primary">Solutions</span>
+            </h1>
+            <p className="text-lg text-gray-600 mb-8">
+              Transforming ideas into visually stunning experiences that captivate and inspire.
+            </p>
+            <div className="flex space-x-4">
+              <a href="#projects" className="bg-primary text-white px-8 py-3 rounded-full hover:bg-opacity-90 transition-all">
+                View Work
+              </a>
+              <a href="#contact" className="border-2 border-secondary text-secondary px-8 py-3 rounded-full hover:bg-secondary hover:text-white transition-all">
+                Get in Touch
+              </a>
+            </div>
+          </div>
+          <div data-aos="fade-left" className="relative">
+            <div className="hero-frame custom-shadow">
+              <img src={('../images/art.jpg')} alt="Designer Profile" className="w-full h-96 object-cover rounded-lg" />
+            </div>
+            <div className="absolute -bottom-4 -right-4 bg-primary text-white p-4 rounded-lg shadow-lg">
+              <div className="text-2xl font-bold">2+ Years</div>
+              <div className="text-sm">Experience</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

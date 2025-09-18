@@ -1,82 +1,67 @@
-import React from 'react';
+
+import React, { useEffect } from 'react';
+import AOS from 'aos';
 import artImage from '../images/art.jpg';
 
-// Using placeholder images to replicate the visual design from the example.
+
 const projects = [
   {
     id: 1,
     image: artImage,
-    title: "Project Name",
-    desc: "I created this personal project in order to show basic features and processes in programming a portfolio as an example.",
-    reverse: false,
+    title: "Brand Identity - EcoLife",
+    desc: "Complete brand identity design for an eco-friendly lifestyle brand, including logo, packaging, and marketing materials.",
+    tags: ["Branding", "Packaging"],
+    aosDelay: "",
   },
   {
     id: 2,
     image: artImage,
-    title: "Project Name",
-    desc: "Work area: your view, deliverables, if any and your personal framework.",
-    reverse: true,
+    title: "Mobile App - TechFlow",
+    desc: "User interface design for a productivity app focused on seamless task management and team collaboration.",
+    tags: ["UI/UX", "Mobile"],
+    aosDelay: "100",
   },
   {
     id: 3,
     image: artImage,
-    title: "Project Name",
-    desc: "Written details and a little description on the basis of the project. If you want to show, profile, details, etc.",
-    reverse: false,
-  },
-  {
-    id: 4,
-    image: artImage,
-    title: "Project Name",
-    desc: "More details about the project can be added here.",
-    reverse: true,
+    title: "Restaurant Menu - Bella Vista",
+    desc: "Elegant menu design for an Italian restaurant, combining traditional elements with modern typography.",
+    tags: ["Print", "Typography"],
+    aosDelay: "200",
   },
 ];
 
-export default function PortfolioSection() {
-  return (
-    <section id="projects" className="min-h-screen bg-gray-100 p-8 font-sans">
-      {/* Tailwind CSS CDN, placed here for demonstration */}
-      <script src="https://cdn.tailwindcss.com"></script>
-      <div className="container mx-auto max-w-4xl py-12">
-        {/* Header Section */}
-        <div className="flex flex-col items-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-800">
-            <span className="relative inline-block pb-1">
-              Projects
-              <span className="absolute bottom-0 left-0 w-full h-1 bg-yellow-400"></span>
-            </span>
-          </h1>
-        </div>
+const PortfolioSection = () => {
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true });
+  }, []);
 
-        {/* Projects Grid */}
-        <div className="space-y-12">
+  return (
+    <section id="projects" className="py-20 bg-background">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16" data-aos="fade-up">
+          <h2 className="text-4xl font-bold text-secondary mb-4">Featured Projects</h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            A selection of recent work that showcases my design approach and creative solutions.
+          </p>
+        </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
             <div
               key={project.id}
-              className={`flex flex-col md:flex-row items-center bg-white rounded-xl shadow-lg overflow-hidden ${
-                project.reverse ? 'md:flex-row-reverse' : ''
-              } md:items-stretch`}
+              className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
+              data-aos="fade-up"
+              data-aos-delay={project.aosDelay}
             >
-              {/* Image Section */}
-              <div className="flex-shrink-0 flex items-center justify-center w-full md:w-1/3 p-4">
-                <img
-                  src={project.image}
-                  alt={`Project ${project.id}`}
-                  className="w-32 h-32 md:w-40 md:h-40 object-cover object-center rounded-lg shadow-md"
-                />
-              </div>
-
-              {/* Text Content Section */}
-              <div className="w-full md:w-2/3 p-6 flex flex-col justify-center">
-                <h2 className="text-2xl font-semibold text-gray-800 mb-2">{project.title}</h2>
-                <p className="text-gray-600 text-sm mb-4">{project.desc}</p>
-                <a
-                  href="#"
-                  className="inline-block self-start px-4 py-2 text-sm font-semibold text-gray-800 border border-gray-400 rounded-full transition-colors duration-300 hover:bg-gray-200"
-                >
-                  View Project
-                </a>
+              <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-secondary mb-2">{project.title}</h3>
+                <p className="text-gray-600 mb-4">{project.desc}</p>
+                <div className="flex flex-wrap gap-2">
+                  {project.tags.map((tag) => (
+                    <span key={tag} className="bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-full text-sm">{tag}</span>
+                  ))}
+                </div>
               </div>
             </div>
           ))}
@@ -84,4 +69,6 @@ export default function PortfolioSection() {
       </div>
     </section>
   );
-}
+};
+
+export default PortfolioSection;

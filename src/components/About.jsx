@@ -1,26 +1,67 @@
 import React from 'react';
+import image1 from '../images/image1.jpg';
+import { useEffect } from 'react';
+import AOS from 'aos';
 
-export default function About() {
+
+const About = () => {
+	useEffect(() => {
+		AOS.init({ duration: 800, once: true });
+	}, []);
+
 	return (
-		<section className="flex flex-col md:flex-row items-center justify-center min-h-[60vh] bg-background px-8 py-16">
-			<div className="flex-1 flex flex-col justify-center md:items-start items-center z-10 max-w-xl">
-				<h2 className="text-3xl font-bold text-secondary mb-4 md:text-left text-center">About me</h2>
-				<p className="text-gray-700 mb-6 md:text-left text-center">
-					Nisl arcu, scelerisque neque ut. Tincidunt amet, tempor duis tortor neque auctor dis ipsum. Pretium cras amet odio amet eleifend id sed cras sed. Aliquet risus posuere aliquet imperdiet sit.
-				</p>
-				<a
-					className="px-5 py-2 bg-secondary rounded-md font-semibold text-white transition-all duration-300 hover:bg-primary w-fit"
-					href="#"
-				>
-					Resume
-				</a>
-			</div>
-			<div className="flex-1 flex justify-center items-center relative mt-10 md:mt-0">
-				<div className="relative w-64 h-64 flex items-center justify-center">
-					<div className="absolute inset-0 rounded-full bg-primary" style={{ zIndex: 1 }}></div>
-					<img src="/src/images/image1.jpg" alt="About" className="relative w-56 h-56 object-cover rounded-full z-10" />
+		<section id="about" className="py-20 bg-white">
+			<div className="container mx-auto px-6">
+				<div className="text-center mb-16" data-aos="fade-up">
+					<h2 className="text-4xl font-bold text-secondary mb-4">About Me</h2>
+					<p className="text-gray-600 max-w-2xl mx-auto">
+						Passionate designer with a keen eye for detail and a love for creating meaningful visual experiences.
+					</p>
+				</div>
+				<div className="grid md:grid-cols-2 gap-12 items-center">
+					<div data-aos="fade-right">
+						<img src={image1} alt="Design Process" className="w-full rounded-lg shadow-lg" />
+					</div>
+					<div data-aos="fade-left">
+						<h3 className="text-2xl font-bold text-secondary mb-6">My Design Philosophy</h3>
+						<p className="text-gray-600 mb-6">
+							I believe that great design is about more than just aesthetics—it's about creating solutions that are both beautiful and functional. Every project is an opportunity to tell a story and connect with audiences on a deeper level.
+						</p>
+						<div className="grid grid-cols-2 gap-6">
+							<div>
+								<div className="flex items-center mb-2">
+									<div className="w-4 h-4 bg-primary rounded-full mr-2"></div>
+									<span className="font-semibold text-secondary">Brand Identity</span>
+								</div>
+								<p className="text-sm text-gray-600">Creating memorable brand experiences</p>
+							</div>
+							<div>
+								<div className="flex items-center mb-2">
+									<div className="w-4 h-4 bg-primary rounded-full mr-2"></div>
+									<span className="font-semibold text-secondary">UI/UX Design</span>
+								</div>
+								<p className="text-sm text-gray-600">User-centered interface design</p>
+							</div>
+							<div>
+								<div className="flex items-center mb-2">
+									<div className="w-4 h-4 bg-primary rounded-full mr-2"></div>
+									<span className="font-semibold text-secondary">Print Design</span>
+								</div>
+								<p className="text-sm text-gray-600">Traditional media with modern touch</p>
+							</div>
+							<div>
+								<div className="flex items-center mb-2">
+									<div className="w-4 h-4 bg-primary rounded-full mr-2"></div>
+									<span className="font-semibold text-secondary">Motion Graphics</span>
+								</div>
+								<p className="text-sm text-gray-600">Bringing designs to life</p>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
 	);
-}
+};
+
+export default About;
