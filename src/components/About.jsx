@@ -14,9 +14,9 @@ const About = () => {
 			<div className="container mx-auto px-6">
 				<div className="text-center mb-16" data-aos="fade-up">
 					<h2 className="text-4xl font-bold text-secondary mb-4">About Me</h2>
-					<p className="text-gray-600 max-w-2xl mx-auto">
-						Passionate designer with a keen eye for detail and a love for creating meaningful visual experiences.
-					</p>
+				<p className="text-gray-600 max-w-2xl mx-auto">
+					As a skilled graphic designer with hands-on experience in Canva, Photoshop, and other design tools, I excel at creating visually appealing and professional materials. I am a highly organized and resourceful Virtual Assistant with proven expertise in time management, administrative support, and digital tools. My experience includes managing schedules, handling correspondence, designing marketing assets, and streamlining workflows to enhance productivity.
+				</p>
 				</div>
 				<div className="grid md:grid-cols-2 gap-12 items-center">
 					<div data-aos="fade-right">

@@ -33,19 +33,10 @@ const loadScript = (src) =>
 const App = () => {
 	const [mobileOpen, setMobileOpen] = useState(false);
 
-	// Inject Tailwind CDN and config, AOS CSS/JS, Feather, and custom styles
+	// Inject Tailwind CDN, AOS CSS/JS, Feather, and custom styles
 	useEffect(() => {
 		// Tailwind CDN
 		loadScript('https://cdn.tailwindcss.com').catch(() => {});
-
-		// Tailwind config
-		ensureTagOnce('script[data-id="tw-config"]', () => {
-			const conf = document.createElement('script');
-			conf.type = 'text/javascript';
-			conf.setAttribute('data-id', 'tw-config');
-			conf.innerHTML = `tailwind.config = { theme: { extend: { colors: { primary: '#DC7049', secondary: '#586234', background: '#F8FAFD' } } } }`;
-			return conf;
-		});
 
 		// AOS CSS
 		ensureTagOnce('link[data-id="aos-css"]', () => {
@@ -113,7 +104,7 @@ const App = () => {
 			<nav className="fixed w-full bg-white bg-opacity-95 backdrop-blur-sm z-50 shadow-sm">
 				<div className="container mx-auto px-6 py-4">
 					<div className="flex justify-between items-center">
-						<div className="text-2xl font-bold text-secondary">DesignStudio</div>
+					<div className="text-2xl font-bold text-secondary">John Juma</div>
 						<div className="hidden md:flex space-x-8">
 							<a href="#home" onClick={(e) => handleSmoothScroll(e, '#home')} className="text-secondary hover:text-primary transition-colors">Home</a>
 							<a href="#about" onClick={(e) => handleSmoothScroll(e, '#about')} className="text-secondary hover:text-primary transition-colors">About</a>
@@ -144,14 +135,14 @@ const App = () => {
 					<div className="grid md:grid-cols-2 gap-12 items-center">
 						<div data-aos="fade-right">
 							<h1 className="text-5xl md:text-6xl font-bold text-secondary mb-6">
-								Creative Design <span className="text-primary">Solutions</span>
+								John <span className="text-primary">Juma</span>
 							</h1>
 							<p className="text-lg text-gray-600 mb-8">
-								Transforming ideas into visually stunning experiences that captivate and inspire.
+								Graphic Designer | Computer and Electronics Systems Engineer | Virtual Assistant
 							</p>
 							<div className="flex space-x-4">
-								<a href="#projects" onClick={(e) => handleSmoothScroll(e, '#projects')} className="bg-primary text-white px-8 py-3 rounded-full hover:bg-opacity-90 transition-all">View Work</a>
-								<a href="#contact" onClick={(e) => handleSmoothScroll(e, '#contact')} className="border-2 border-secondary text-secondary px-8 py-3 rounded-full hover:bg-secondary hover:text-white transition-all">Get in Touch</a>
+								<a href="#projects" onClick={(e) => handleSmoothScroll(e, '#projects')} className="bg-primary text-white px-8 py-3 rounded-full hover:bg-opacity-90 transition-all">Explore My Work</a>
+								<a href="#contact" onClick={(e) => handleSmoothScroll(e, '#contact')} className="border-2 border-secondary text-secondary px-8 py-3 rounded-full hover:bg-secondary hover:text-white transition-all">Hire Me</a>
 							</div>
 						</div>
 						<div data-aos="fade-left" className="relative">
@@ -173,7 +164,7 @@ const App = () => {
 					<div className="text-center mb-16" data-aos="fade-up">
 						<h2 className="text-4xl font-bold text-secondary mb-4">About Me</h2>
 						<p className="text-gray-600 max-w-2xl mx-auto">
-							Passionate designer with a keen eye for detail and a love for creating meaningful visual experiences.
+							As a skilled graphic designer with hands-on experience in Canva, Photoshop, and other design tools, I excel at creating visually appealing and professional materials. I am a highly organized and resourceful Virtual Assistant with proven expertise in time management, administrative support, and digital tools. My experience includes managing schedules, handling correspondence, designing marketing assets, and streamlining workflows to enhance productivity.
 						</p>
 					</div>
 					<div className="grid md:grid-cols-2 gap-12 items-center">
@@ -366,8 +357,8 @@ const App = () => {
 											<i data-feather="mail" className="text-primary"></i>
 										</div>
 										<div>
-											<div className="text-sm text-gray-500">Email</div>
-											<div className="font-semibold text-secondary">hello@designstudio.com</div>
+												<div className="text-sm text-gray-500">Email</div>
+												<div className="font-semibold text-secondary">jumaelectricals@gmail.com</div>
 										</div>
 									</div>
 									<div className="flex items-center">
@@ -375,8 +366,8 @@ const App = () => {
 											<i data-feather="phone" className="text-primary"></i>
 										</div>
 										<div>
-											<div className="text-sm text-gray-500">Phone</div>
-											<div className="font-semibold text-secondary">+1 (555) 123-4567</div>
+												<div className="text-sm text-gray-500">Phone</div>
+												<div className="font-semibold text-secondary">+254 746 981 845</div>
 										</div>
 									</div>
 									<div className="flex items-center">
@@ -384,8 +375,8 @@ const App = () => {
 											<i data-feather="map-pin" className="text-primary"></i>
 										</div>
 										<div>
-											<div className="text-sm text-gray-500">Location</div>
-											<div className="font-semibold text-secondary">San Francisco, CA</div>
+												<div className="text-sm text-gray-500">Location</div>
+												<div className="font-semibold text-secondary">Nairobi, Kenya</div>
 										</div>
 									</div>
 								</div>
@@ -416,7 +407,7 @@ const App = () => {
 			<footer className="bg-secondary text-white py-12">
 				<div className="container mx-auto px-6">
 					<div className="text-center">
-						<div className="text-2xl font-bold mb-4">DesignStudio</div>
+						<div className="text-2xl font-bold mb-4">John Juma</div>
 						<p className="text-gray-300 mb-8">Creating beautiful designs that make a difference</p>
 						<div className="flex justify-center space-x-6 mb-8">
 							<a href="#home" onClick={(e) => handleSmoothScroll(e, '#home')} className="hover:text-primary transition-colors">Home</a>
@@ -425,7 +416,7 @@ const App = () => {
 							<a href="#testimonials" onClick={(e) => handleSmoothScroll(e, '#testimonials')} className="hover:text-primary transition-colors">Testimonials</a>
 							<a href="#contact" onClick={(e) => handleSmoothScroll(e, '#contact')} className="hover:text-primary transition-colors">Contact</a>
 						</div>
-						<p className="text-gray-400">© 2024 DesignStudio. All rights reserved.</p>
+						<p className="text-gray-400">© 2025 John Juma. All rights reserved.</p>
 					</div>
 				</div>
 			</footer>

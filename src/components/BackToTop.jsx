@@ -27,11 +27,11 @@ const BackToTop = () => {
 
   return (
     <button
-      className={`back-to-top${isVisible ? ' show' : ''}`}
+      className={`back-to-top${isVisible ? ' show' : ''} bg-secondary text-background hover:bg-background`}
       onClick={scrollToTop}
       aria-label="Back to top"
     >
-      <i className="fa fa-chevron-up"></i>
+      <i className="fa fa-chevron-up text-secondary"></i>
     </button>
   );
 };

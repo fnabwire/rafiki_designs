@@ -49,7 +49,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <div className="text-sm text-gray-500">Email</div>
-                    <div className="font-semibold text-secondary">hello@rafikidesigns.com</div>
+                    <div className="font-semibold text-secondary">jumaelectricals@gmail.com</div>
                   </div>
                 </div>
                 <div className="flex items-center">
@@ -58,7 +58,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <div className="text-sm text-gray-500">Phone</div>
-                    <div className="font-semibold text-secondary">+254 725 637 846</div>
+                    <div className="font-semibold text-secondary">+254 746 981 845</div>
                   </div>
                 </div>
                 <div className="flex items-center">

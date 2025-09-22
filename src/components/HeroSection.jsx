@@ -12,17 +12,17 @@ const HeroSection = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div data-aos="fade-right">
             <h1 className="text-5xl md:text-6xl font-bold text-secondary mb-6">
-              Creative Design <span className="text-primary">Solutions</span>
+              John <span className="text-primary">Juma</span>
             </h1>
             <p className="text-lg text-gray-600 mb-8">
-              Transforming ideas into visually stunning experiences that captivate and inspire.
+              Graphic Designer | Computer and Electronics Systems Engineer | Virtual Assistant
             </p>
             <div className="flex space-x-4">
               <a href="#projects" className="bg-primary text-white px-8 py-3 rounded-full hover:bg-opacity-90 transition-all">
-                View Work
+                Explore My Work
               </a>
               <a href="#contact" className="border-2 border-secondary text-secondary px-8 py-3 rounded-full hover:bg-secondary hover:text-white transition-all">
-                Get in Touch
+                Hire Me
               </a>
             </div>
           </div>
