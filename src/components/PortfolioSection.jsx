@@ -49,7 +49,7 @@ const PortfolioSection = () => {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
+              className="bg-white rounded-lg overflow-hidden shadow-[0_10px_40px_-12px_rgba(99,102,241,0.25)] hover:shadow-[0_20px_60px_-15px_rgba(236,72,153,0.35)] transition-shadow"
               data-aos="fade-up"
               data-aos-delay={project.aosDelay}
             >

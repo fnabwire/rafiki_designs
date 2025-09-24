@@ -11,7 +11,7 @@ const ContactSection = () => {
   }, []);
 
   return (
-    <section id="contact" className="py-20 bg-background">
+    <section id="contact" className="py-20 bg-gradient-to-b from-white via-background to-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16" data-aos="fade-up">
           <h2 className="text-4xl font-bold text-secondary mb-4">Let's Work Together</h2>
@@ -21,26 +21,26 @@ const ContactSection = () => {
         </div>
         <div className="grid md:grid-cols-2 gap-12">
           <div data-aos="fade-right">
-            <form className="space-y-6">
+            <form className="space-y-6 bg-white p-8 rounded-xl shadow-[0_20px_60px_-20px_rgba(59,130,246,0.25)] border border-primary/10">
               <div>
                 <label className="block text-secondary font-semibold mb-2">Name</label>
-                <input type="text" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" />
+                <input type="text" className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" />
               </div>
               <div>
                 <label className="block text-secondary font-semibold mb-2">Email</label>
-                <input type="email" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" />
+                <input type="email" className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" />
               </div>
               <div>
                 <label className="block text-secondary font-semibold mb-2">Message</label>
-                <textarea rows="5" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" />
+                <textarea rows="5" className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" />
               </div>
-              <button type="submit" className="bg-primary text-white px-8 py-3 rounded-lg hover:bg-opacity-90 transition-all">
+              <button type="submit" className="bg-gradient-to-r from-primary to-rose-500 text-white px-8 py-3 rounded-lg hover:opacity-90 transition-all">
                 Send Message
               </button>
             </form>
           </div>
           <div data-aos="fade-left">
-            <div className="bg-white p-8 rounded-lg shadow-lg">
+            <div className="bg-white p-8 rounded-xl shadow-[0_20px_60px_-20px_rgba(236,72,153,0.25)] border border-primary/10">
               <h3 className="text-2xl font-bold text-secondary mb-6">Contact Information</h3>
               <div className="space-y-4">
                 <div className="flex items-center">
