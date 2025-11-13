@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useInView } from 'react-intersection-observer';
+
 import image1 from '../images/image1.jpg';
 import image2 from '../images/image2.jpg';
 import image3 from '../images/image3.jpg';
@@ -110,8 +110,15 @@ const projects = [
   { id: 53, image: image53, category: 'Advertising' },
 ];
 
+
+const PRIMARY_BG_COLOR = 'bg-[#0f4c5c]'; // Deep Cyan/Blue
+const PRIMARY_TEXT_COLOR = 'text-[#0f4c5c]';
+const SECONDARY_BG_COLOR = 'bg-[#e36414]'; // Vibrant Orange
+const SECONDARY_TEXT_COLOR = 'text-[#e36414]';
+
+
 export default function Portfolio() {
-  const { ref } = useInView({ triggerOnce: true });
+  
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [modalImage, setModalImage] = useState(null);
 
@@ -125,45 +132,79 @@ export default function Portfolio() {
   }, {});
 
   return (
-    <section ref={ref} className="bg-background p-8 md:p-16 rounded-md">
+    <section id="portfolio-gallery" className="bg-gray-100 p-8 md:p-12 rounded-xl max-w-7xl mx-auto my-10 shadow-lg">
+      
       {/* Category Buttons */}
-      <div className="flex justify-center gap-2 flex-wrap mb-6">
+      <div className="flex justify-center gap-3 flex-wrap mb-10">
         {categories.map(category => (
           <button
             key={category}
-            className={`px-4 py-2 rounded-md font-semibold transition-colors duration-300 ${selectedCategory === category ? 'bg-background text-secondary' : 'bg-primary text-white hover:bg-secondary'}`}
+            className={`px-5 py-2 rounded-full text-sm sm:text-base font-semibold transition-all duration-300 shadow-md ${
+              selectedCategory === category 
+                ? `${SECONDARY_BG_COLOR} text-white shadow-xl transform scale-105` // Active: Vibrant Orange
+                : `${PRIMARY_BG_COLOR} text-white hover:${SECONDARY_BG_COLOR}` // Inactive: Deep Cyan, Hover: Vibrant Orange
+            }`}
             onClick={() => setSelectedCategory(category)}
           >
             {category}
           </button>
         ))}
       </div>
+
       {/* Display projects by category */}
       {Object.entries(projectsByCategory).map(([category, categoryProjects]) => (
         <div key={category} className={category === selectedCategory || selectedCategory === 'All' ? '' : 'hidden'}>
-          <h2 className="text-secondary text-xl font-bold mt-6 mb-4 text-center">{category}</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+         
+          <h2 className={`${SECONDARY_TEXT_COLOR} text-3xl font-extrabold mt-6 mb-8 text-center border-b-2 border-gray-300 pb-2`}>{category}</h2>
+          
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-5">
             {categoryProjects.map(project => (
-              <div key={project.id} className="m-2 text-center text-secondary">
+              <div 
+                key={project.id} 
+                className="group relative overflow-hidden rounded-xl shadow-lg transition-shadow duration-300 hover:shadow-2xl"
+              >
                 <img
                   src={project.image}
-                  alt={`Project ${project.id}`}
-                  className="w-full h-auto rounded-md cursor-pointer hover:scale-105 transition-transform duration-200"
+                  alt={`Project ${project.id} - ${project.category}`}
+                  className="w-full h-full object-cover aspect-square cursor-pointer transition-transform duration-500 group-hover:scale-110"
                   onClick={() => setModalImage(project.image)}
                 />
+                
+                {/* Overlay to show category on hover */}
+                <div 
+                  className={`absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
+                  onClick={() => setModalImage(project.image)}
+                >
+                    <p className={`text-white text-base font-bold px-3 py-1 rounded-full ${PRIMARY_BG_COLOR} bg-opacity-80`}>{project.category}</p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       ))}
+
       {/* Modal for image preview */}
       {modalImage && (
-        <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-80 flex items-center justify-center z-[1000]" onClick={() => setModalImage(null)}>
-          <div className="max-w-[90%] max-h-[90%] flex items-center">
-            <img src={modalImage} alt="Preview" className="w-[40vw] h-[50vh] rounded-md shadow-lg object-contain" />
+        <div 
+          className="fixed inset-0 w-full h-full bg-black bg-opacity-90 flex items-center justify-center z-[1000] p-4 backdrop-blur-sm" 
+          onClick={() => setModalImage(null)}
+        >
+          <div className="relative max-w-full max-h-full">
+            <img 
+              src={modalImage} 
+              alt="Preview" 
+              className="max-w-[90vw] max-h-[90vh] rounded-lg shadow-2xl object-contain" 
+            />
+            <button 
+                onClick={() => setModalImage(null)}
+                className={`absolute top-4 right-4 text-white text-3xl font-bold p-2 rounded-full ${SECONDARY_BG_COLOR} hover:bg-white hover:${SECONDARY_TEXT_COLOR} transition-colors`}
+            >
+                &times;
+            </button>
           </div>
         </div>
       )}
+
     </section>
   );
 }

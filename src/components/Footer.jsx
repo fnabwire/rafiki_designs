@@ -7,7 +7,7 @@ const Footer = () => {
 
   return (
     
-    <footer className={`bg-[${PRIMARY_COLOR}] text-white py-10 rounded-t-xl mt-8`}>
+    <footer className={`bg-[${SECONDARY_COLOR}] text-white py-10 rounded-t-xl mt-8`}>
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="text-center">
           {/* Company Name */}
@@ -17,11 +17,11 @@ const Footer = () => {
           {/* Navigation Links */}
           <div className="flex justify-center space-x-6 mb-8 text-lg font-medium">
             
-            <a href="#" className={`hover:text-[${SECONDARY_COLOR}] transition-colors duration-300`}>Home</a>
-            <a href="#about" className={`hover:text-[${SECONDARY_COLOR}] transition-colors duration-300`}>About</a>
-            <a href="#projects" className={`hover:text-[${SECONDARY_COLOR}] transition-colors duration-300`}>Projects</a>
-            <a href="#testimonials" className={`hover:text-[${SECONDARY_COLOR}] transition-colors duration-300`}>Testimonials</a>
-            <a href="#contact" className={`hover:text-[${SECONDARY_COLOR}] transition-colors duration-300`}>Contact</a>
+            <a href="#" className={`hover:text-[${PRIMARY_COLOR}] transition-colors duration-300`}>Home</a>
+            <a href="#about" className={`hover:text-[${PRIMARY_COLOR}] transition-colors duration-300`}>About</a>
+            <a href="#projects" className={`hover:text-[${PRIMARY_COLOR}] transition-colors duration-300`}>Projects</a>
+            <a href="#testimonials" className={`hover:text-[${PRIMARY_COLOR}] transition-colors duration-300`}>Testimonials</a>
+            <a href="#contact" className={`hover:text-[${PRIMARY_COLOR}] transition-colors duration-300`}>Contact</a>
           </div>
           
           {/* Copyright */}
