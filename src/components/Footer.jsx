@@ -1,20 +1,31 @@
-import React from 'react';
+
 
 const Footer = () => {
+  
+  const PRIMARY_COLOR = '#0f4c5c'; // Deep Cyan/Blue
+  const SECONDARY_COLOR = '#e36414'; // Vibrant Orange
+
   return (
-    <footer className="bg-secondary text-white py-10">
-      <div className="container mx-auto px-6">
+    
+    <footer className={`bg-[${PRIMARY_COLOR}] text-white py-10 rounded-t-xl mt-8`}>
+      <div className="container mx-auto px-6 max-w-7xl">
         <div className="text-center">
-          <div className="text-2xl font-bold mb-4">John Juma</div>
-          <p className="text-gray-300 mb-8">Creating beautiful designs that make a difference</p>
-          <div className="flex justify-center space-x-6 mb-8">
-            <a href="#" className="hover:text-primary transition-colors">Home</a>
-            <a href="#about" className="hover:text-primary transition-colors">About</a>
-            <a href="#projects" className="hover:text-primary transition-colors">Projects</a>
-            <a href="#testimonials" className="hover:text-primary transition-colors">Testimonials</a>
-            <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
+          {/* Company Name */}
+          <div className="text-3xl font-extrabold mb-4 tracking-wider">Rafiki Designs</div>
+          <p className="text-white mb-8 opacity-90">Creating beautiful designs that make a difference</p>
+          
+          {/* Navigation Links */}
+          <div className="flex justify-center space-x-6 mb-8 text-lg font-medium">
+            
+            <a href="#" className={`hover:text-[${SECONDARY_COLOR}] transition-colors duration-300`}>Home</a>
+            <a href="#about" className={`hover:text-[${SECONDARY_COLOR}] transition-colors duration-300`}>About</a>
+            <a href="#projects" className={`hover:text-[${SECONDARY_COLOR}] transition-colors duration-300`}>Projects</a>
+            <a href="#testimonials" className={`hover:text-[${SECONDARY_COLOR}] transition-colors duration-300`}>Testimonials</a>
+            <a href="#contact" className={`hover:text-[${SECONDARY_COLOR}] transition-colors duration-300`}>Contact</a>
           </div>
-          <p className="text-gray-400">© 2025 John Juma. All rights reserved.</p>
+          
+          {/* Copyright */}
+          <p className="text-white opacity-70 text-sm mt-6">© 2025 Rafiki Designs. All rights reserved.</p>
         </div>
       </div>
     </footer>
