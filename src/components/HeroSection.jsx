@@ -10,14 +10,14 @@ const HeroSection = () => {
 
   return (
     
-    <section id="home" className="min-h-[50vh] flex items-center pt-16 pb-12 bg-gray-50 overflow-hidden">
+    <section id="home" className="min-h-[50vh] flex items-center pt-24 pb-12 bg-gray-50 overflow-hidden">
       <div className="container mx-auto px-4 max-w-5xl"> 
         <div className="grid lg:grid-cols-12 gap-8 items-center"> 
           
         
           <div className="lg:col-span-6 xl:col-span-7">
                         
-              <h1 className="text-3xl sm:text-4xl lg:text-4xl font-extrabold mb-2 leading-tight  ">
+              <h1 className="text-3xl sm:text-4xl lg:text-4xl font-extrabold mb-2 leading-tight text-gray-900 dark:text-[#0f4c5c]">
               Hello, I'm
               <span 
                 className="block text-4xl sm:text-5xl lg:text-6xl font-black mt-1"

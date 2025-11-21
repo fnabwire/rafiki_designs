@@ -5,25 +5,25 @@ const projects = [
   {
     id: 1,
     imagePlaceholder: "https://placehold.co/600x300/e36414/ffffff?text=EcoLife+Branding",
-    title: "Brand Identity - EcoLife",
-    desc: "Complete brand identity design for an eco-friendly lifestyle brand, including logo, packaging, and marketing materials.",
-    tags: ["Branding", "Packaging"],
+    title: "Advertising - Mac Dental",
+    desc: "Offer a wide range of dental services including general dentistry, cosmetic dentistry, orthodontics, and emergency dental care.",
+    tags: ["Advertising", "Marketing"],
   
   },
   {
     id: 2,
     imagePlaceholder: "https://placehold.co/600x300/0f4c5c/ffffff?text=TechFlow+App",
-    title: "Mobile App - TechFlow",
-    desc: "User interface design for a productivity app focused on seamless task management and team collaboration.",
-    tags: ["UI/UX", "Mobile"],
+    title: "Company Profile - Kijani",
+    desc: "Kijani Company Profile.A Nairobi-based,data driven sustainability partner that provides Kenyan businesses with the technology,expertise, and strategic insight to measure, manage, and report on their Environmental, Social, and Governance(ESG) performance.",
+    tags: ["Company", "Business Profile"],
     
   },
   {
     id: 3,
     imagePlaceholder: "https://placehold.co/600x300/e36414/ffffff?text=Bella+Vista+Menu",
-    title: "Restaurant Menu - Bella Vista",
-    desc: "Elegant menu design for an Italian restaurant, combining traditional elements with modern typography.",
-    tags: ["Print", "Typography"],
+    title: "Advertising - Orion Energy",
+    desc: "Orion Energy is a leading provider of renewable energy solutions, specializing in solar and wind power installations for residential, commercial, and industrial clients.",
+    tags: ["Marketing", "Advertising"],
     
   },
 ];

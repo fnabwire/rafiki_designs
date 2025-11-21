@@ -53,6 +53,16 @@ import image50 from '../images/image50.jpg';
 import image51 from '../images/image51.jpg';
 import image52 from '../images/image52.jpg';
 import image53 from '../images/image53.jpg';
+import image54 from '../images/image54.jpg';
+import image55 from '../images/image55.jpg';
+import image56 from '../images/image56.jpg';
+import image57 from '../images/image57.jpg';
+import image58 from '../images/image58.jpg';
+import image59 from '../images/image59.jpg';
+import image60 from '../images/image60.jpg';
+import image61 from '../images/image61.jpg';
+import image62 from '../images/image62.jpg';
+import image63 from '../images/image63.jpg';
 
 const projects = [
   { id: 1, image: image1, category: 'Advertising' },
@@ -108,6 +118,16 @@ const projects = [
   { id: 51, image: image51, category: 'Brand Design' },
   { id: 52, image: image52, category: 'Brand Design' },
   { id: 53, image: image53, category: 'Advertising' },
+  { id: 54, image: image54, category: 'Advertising' },
+  { id: 55, image: image55, category: 'Photo Manipulation' },
+  { id: 56, image: image56, category: 'Photo Manipulation' },
+  { id: 57, image: image57, category: 'Photo Manipulation' },
+  { id: 58, image: image58, category: 'Photo Manipulation' },
+  { id: 59, image: image59, category: 'Digital Marketing' },
+  { id: 60, image: image60, category: 'Digital Marketing' },
+  { id: 61, image: image61, category: 'Digital Marketing' },
+  { id: 62, image: image62, category: 'Digital Marketing' },
+  { id: 63, image: image63, category: 'Digital Marketing' },
 ];
 
 
