@@ -1,70 +1,136 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import heroImage from '../images/hero.jpg';
+import { Briefcase } from 'lucide-react'; 
 
 const HeroSection = () => {
 
+  
   const PRIMARY_COLOR_HEX = '#0f4c5c'; // Deep Cyan/Blue
   const SECONDARY_COLOR_HEX = '#e36414'; // Vibrant Orange
 
-  useEffect(() => {
-      }, []);
-
   return (
-    <section id="home" className="min-h-screen flex items-center pt-24 pb-16 bg-white">
-      <div className="container mx-auto px-6 max-w-7xl">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Replaced data-aos with simple structure */}
-          <div>
-            {/* Tag Banner: Primary Color Scheme */}
-            <div className={`inline-flex items-center px-4 py-1 rounded-full bg-[${PRIMARY_COLOR_HEX}]/10 text-[${PRIMARY_COLOR_HEX}] text-sm font-medium mb-4`}>
-              Available for freelance work
-            </div>
-            
-            {/* Main Heading Gradient: Secondary to Primary */}
-            <h1 className="text-5xl md:text-6xl font-extrabold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[${SECONDARY_COLOR_HEX}] via-[${PRIMARY_COLOR_HEX}] to-[${SECONDARY_COLOR_HEX}]">
-              John Juma
+    
+    <section id="home" className="min-h-[50vh] flex items-center pt-16 pb-12 bg-gray-50 overflow-hidden">
+      <div className="container mx-auto px-4 max-w-5xl"> 
+        <div className="grid lg:grid-cols-12 gap-8 items-center"> 
+          
+        
+          <div className="lg:col-span-6 xl:col-span-7">
+                        
+              <h1 className="text-3xl sm:text-4xl lg:text-4xl font-extrabold mb-2 leading-tight  ">
+              Hello, I'm
+              <span 
+                className="block text-4xl sm:text-5xl lg:text-6xl font-black mt-1"
+                style={{ background: `linear-gradient(to right, ${SECONDARY_COLOR_HEX}, ${PRIMARY_COLOR_HEX})`, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
+              >
+                John Juma
+              </span>
             </h1>
             
-            <p className="text-lg md:text-xl text-gray-700 mb-6 leading-relaxed">
-              Graphic Designer • Computer & Electronics Systems Engineer • Virtual Assistant
+            
+            <p className="text-base md:text-lg text-gray-700 mb-4 font-medium">
+              Graphic Designer • Computer Engineer • Virtual Assistant
             </p>
             
-            {/* Skill Tags */}
-            <ul className="flex flex-wrap gap-2 mb-8">
-              {/* Brand Identity: Secondary Color Scheme */}
-              <li className={`px-3 py-1 text-sm rounded-full bg-[${SECONDARY_COLOR_HEX}]/10 text-[${SECONDARY_COLOR_HEX}] font-medium`}>Brand Identity</li>
-              {/* UI/UX: Primary Color Scheme */}
-              <li className={`px-3 py-1 text-sm rounded-full bg-[${PRIMARY_COLOR_HEX}]/10 text-[${PRIMARY_COLOR_HEX}] font-medium`}>UI/UX</li>
-              {/* Marketing: Mapped to Primary Color Scheme for consistency */}
-              <li className={`px-3 py-1 text-sm rounded-full bg-[${PRIMARY_COLOR_HEX}]/10 text-[${PRIMARY_COLOR_HEX}] font-medium`}>Marketing</li>
-            </ul>
             
-            <div className="flex space-x-4">
-              {/* CTA 1 (Explore Work): Primary Background */}
+            <div className="mb-5">
+              <h3 className="text-sm font-semibold text-gray-600 mb-1 flex items-center">
+                <Briefcase className="w-4 h-4 mr-1" />
+                Core Proficiencies:
+              </h3>
+              <ul className="flex flex-wrap gap-2">
+               
+                <li 
+                  className="px-3 py-1 text-xs rounded-md font-medium shadow-sm"
+                  style={{ backgroundColor: `${SECONDARY_COLOR_HEX}1A`, color: SECONDARY_COLOR_HEX }}
+                >
+                  Brand Identity
+                </li>
+                              
+                <li 
+                  className="px-3 py-1 text-xs rounded-md font-medium shadow-sm"
+                  style={{ backgroundColor: `${SECONDARY_COLOR_HEX}1A`, color: SECONDARY_COLOR_HEX }}
+                >
+                  Digital Marketing
+                </li>
+                <li 
+                  className="px-3 py-1 text-xs rounded-md font-medium shadow-sm"
+                 style={{ backgroundColor: `${SECONDARY_COLOR_HEX}1A`, color: SECONDARY_COLOR_HEX }}
+                >
+                  Advertising
+                </li>
+                <li 
+                  className="px-3 py-1 text-xs rounded-md font-medium shadow-sm"
+                  style={{ backgroundColor: `${SECONDARY_COLOR_HEX}1A`, color: SECONDARY_COLOR_HEX }}
+                >
+                  Logo Design
+                </li>
+                <li 
+                  className="px-3 py-1 text-xs rounded-md font-medium shadow-sm"
+                  style={{ backgroundColor: `${SECONDARY_COLOR_HEX}1A`, color: SECONDARY_COLOR_HEX }}
+                >
+                  Photo Manipulation
+                </li>
+                <li 
+                  className="px-3 py-1 text-xs rounded-md font-medium shadow-sm"
+                  style={{ backgroundColor: `${SECONDARY_COLOR_HEX}1A`, color: SECONDARY_COLOR_HEX }}
+                >
+                  Digital Marketing
+                </li>
+              </ul>
+            </div>
+            
+            {/* Call-to-Action Buttons */}
+            <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-3">
+              
+              {/* CTA 1 (Explore Work) */}
               <a 
                 href="#projects" 
-                className={`bg-[${PRIMARY_COLOR_HEX}] text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:opacity-90`}
+                className="text-white px-5 py-2.5 rounded-full font-bold text-sm transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-primary/50"
+                style={{ backgroundColor: PRIMARY_COLOR_HEX }}
               >
-                Explore My Work
+                Explore My Portfolio
               </a>
-              {/* CTA 2 (Hire Me): Secondary Border/Text */}
+
+              {/* CTA 2 (Hire Me) */}
               <a 
                 href="#contact" 
-                className={`border-2 border-[${SECONDARY_COLOR_HEX}] text-[${SECONDARY_COLOR_HEX}] px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:bg-[${SECONDARY_COLOR_HEX}] hover:text-white`}
+                className="border-2 px-5 py-2.5 rounded-full font-bold text-sm transition-all duration-300 flex items-center justify-center hover:shadow-md hover:bg-white"
+                style={{ borderColor: SECONDARY_COLOR_HEX, color: SECONDARY_COLOR_HEX }}
               >
-                Hire Me
+                Get In Touch
               </a>
             </div>
           </div>
           
-          {/* Hero Image Section */}
-          <div className="relative">
+          {/* Hero Image */}
+          <div className="lg:col-span-6 xl:col-span-5 relative order-first lg:order-last">
+            {/* Decorative shape */}
             <div 
-              // Custom shadow using Primary Color
-              className={`rounded-xl overflow-hidden shadow-[0_20px_60px_-12px_rgba(15,76,92,0.4)] ring-4 ring-[${PRIMARY_COLOR_HEX}]/10`}
+              className="absolute hidden lg:block w-36 h-36 rounded-full -top-6 -right-6 opacity-50 blur-lg z-0"
+              style={{ backgroundColor: SECONDARY_COLOR_HEX }}
+            ></div>
+            
+            {/* Image Container*/}
+            <div 
+              className="relative z-10 rounded-xl overflow-hidden aspect-square w-full mx-auto max-w-xs lg:max-w-sm"
+              style={{ 
+                boxShadow: `0 10px 20px -6px ${PRIMARY_COLOR_HEX}66`, 
+                border: `3px solid ${PRIMARY_COLOR_HEX}`
+              }}
             >
-              <img src={heroImage} alt="Designer Profile" className="w-full h-96 object-cover" />
+              <img 
+                src={heroImage} 
+                alt="John Juma Profile" 
+                className="w-full h-full object-cover transform scale-105 hover:scale-100 transition duration-500 ease-in-out" 
+              />
             </div>
+            
+            {/* Decorative shape */}
+             <div 
+              className="absolute hidden lg:block w-24 h-24 rounded-full bottom-4 left-0 opacity-40 blur-md z-0"
+              style={{ backgroundColor: PRIMARY_COLOR_HEX }}
+            ></div>
           </div>
           
         </div>

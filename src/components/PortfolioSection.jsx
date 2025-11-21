@@ -84,7 +84,7 @@ const PortfolioSection = () => {
 
         <div className="text-center mt-12">
             <a 
-                href="Portfolio" // Placeholder link for the other projects page
+                href="#Portfolio" // Placeholder link for the other projects page
                 target="_blank" // Opens the link in a new tab
                 rel="noopener noreferrer"
                 
