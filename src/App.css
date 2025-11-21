@@ -229,6 +229,14 @@
 }
 
 img {
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+  display: block;
+}
+
+/* Legacy-reset class: apply only to images that require the previous unset behavior */
+.legacy-img-reset {
   width: unset !important;
   height: unset !important;
   max-width: 100%;

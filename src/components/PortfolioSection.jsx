@@ -1,28 +1,31 @@
 import React from 'react';
 import Portfolio from './Portfolio';
+import image55 from '../images/image55.jpeg';
+import image70 from '../images/image70.jpeg';
+import kijaniprofile from '../images/kijaniprofile.jpeg';
 
 const projects = [
   {
     id: 1,
-    imagePlaceholder: "https://placehold.co/600x300/e36414/ffffff?text=EcoLife+Branding",
-    title: "Advertising - Mac Dental",
-    desc: "Offer a wide range of dental services including general dentistry, cosmetic dentistry, orthodontics, and emergency dental care.",
-    tags: ["Advertising", "Marketing"],
+    imagePlaceholder: image55,
+    title: "Brand Design - Mac Dental",
+    desc: "Their team of experienced dentists and hygienists are dedicated to providing personalized care to help patients achieve optimal oral health.Mac Dental utilizes the latest technology and techniques to ensure comfortable and effective treatments.Mac Dental is committed to delivering exceptional dental care in a welcoming environment.",
+    tags: ["Branding", "Advertising", "Marketing"],
   
   },
   {
     id: 2,
-    imagePlaceholder: "https://placehold.co/600x300/0f4c5c/ffffff?text=TechFlow+App",
+    imagePlaceholder: kijaniprofile,
     title: "Company Profile - Kijani",
-    desc: "Kijani Company Profile.A Nairobi-based,data driven sustainability partner that provides Kenyan businesses with the technology,expertise, and strategic insight to measure, manage, and report on their Environmental, Social, and Governance(ESG) performance.",
+    desc: "Kijani Company Profile.A Nairobi-based,data driven sustainability partner that provides Kenyan businesses with the technology,expertise,and strategic insight to measure, manage, and report on their Environmental, Social, and Governance(ESG) performance ",
     tags: ["Company", "Business Profile"],
     
   },
   {
     id: 3,
-    imagePlaceholder: "https://placehold.co/600x300/e36414/ffffff?text=Bella+Vista+Menu",
+    imagePlaceholder: image70,
     title: "Advertising - Orion Energy",
-    desc: "Orion Energy is a leading provider of renewable energy solutions, specializing in solar and wind power installations for residential, commercial, and industrial clients.",
+    desc: "Orion Energy is a leading provider of renewable energy solutions, specializing in solar and wind power installations for residential, commercial, and industrial clients.Orion Energy helps businesses and homeowners reduce their carbon footprint while lowering energy costs through cutting-edge technology and expert service.",
     tags: ["Marketing", "Advertising"],
     
   },
@@ -60,7 +63,7 @@ const PortfolioSection = () => {
               <img 
                 src={project.imagePlaceholder} 
                 alt={project.title} 
-                className="w-full h-48 object-cover" 
+                className="w-full h-65 object-cover" 
               />
               <div className="p-6">
                 
@@ -84,9 +87,7 @@ const PortfolioSection = () => {
 
         <div className="text-center mt-12">
             <a 
-                href="#Portfolio" // Placeholder link for the other projects page
-                target="_blank" // Opens the link in a new tab
-                rel="noopener noreferrer"
+                href="#Portfolio"             
                 
                 className={`inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white ${SECONDARY_BG_COLOR} shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:brightness-110`}
             >
