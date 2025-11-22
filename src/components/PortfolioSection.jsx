@@ -2,7 +2,7 @@ import React from 'react';
 import Portfolio from './Portfolio';
 import image55 from '../images/image55.jpeg';
 import image70 from '../images/image70.jpeg';
-import kijaniprofile from '../images/kijaniprofile.jpeg';
+import kijaniprofile from '../images/kijaniprofile.png';
 
 const projects = [
   {
