@@ -35,7 +35,7 @@ const Testimonials = () => {
 
   
   return (
-    <section id="testimonials" className="py-20 bg-gray-50">
+    <section id="testimonials" className="pt-20 pb-0 bg-gray-50">
       
       <style>
         {`

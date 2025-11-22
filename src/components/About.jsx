@@ -12,12 +12,8 @@ const About = () => {
     const SECONDARY_HIGHLIGHT_COLOR = 'text-[#e36414]'; // Vibrant Orange
     
     // Card Style Definitions
-    const lightCardBg = "bg-cyan-50"; // A light background to complement the primary color
-    const darkCardBg = "bg-gray-800"; // Dark background for contrast
-    
-    // Icons/Titles for the light card use the primary text color
-    const lightCardIconColor = PRIMARY_TEXT_COLOR; 
-    
+    const lightCardBg = "#F9FAFB"; // A light background to complement the primary color
+   
     // Icons/Titles for the dark cards use the secondary highlight color
     const darkCardIconColor = SECONDARY_HIGHLIGHT_COLOR; 
   
@@ -45,13 +41,13 @@ const About = () => {
     );
 
     return (
-        <section id="about" className="py-20 bg-white dark:bg-gray-900">
+        <section id="about" className="py-12 bg-[#0f4c5c] text-white">
             <div className="container mx-auto px-6">
                 
                 {/* About Me Section Header */}
                 <div className="text-center mb-16" data-aos="fade-up">
-                    <h2 className={`text-4xl font-bold ${PRIMARY_TEXT_COLOR} mb-4`}>About Me</h2>
-                    <p className="text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+                    <h2 className={`text-4xl font-bold mb-4 text-white`}>About Me</h2>
+                    <p className="text-white/90 max-w-3xl mx-auto">
                         As a skilled graphic designer with hands-on experience in Canva, Photoshop, and other design tools, I excel at creating visually appealing and professional materials. I am a highly organized and resourceful Virtual Assistant with proven expertise in time management, administrative support, and digital tools. My experience includes managing schedules, handling correspondence, designing marketing assets, and streamlining workflows to enhance productivity.
                     </p>
                 </div>
@@ -64,17 +60,17 @@ const About = () => {
                         title="Available Now"
                         bgColor={lightCardBg}
                         icon={FiCheckCircle}
-                        titleColor={lightCardIconColor}
-                        iconBaseColor={lightCardIconColor}
+                        titleColor={darkCardIconColor}
+                        iconBaseColor={darkCardIconColor}
                     >
-                        <ListItem icon={FiBriefcase} text="Full-time & Internship roles" color={PRIMARY_TEXT_COLOR} />
-                        <ListItem icon={FiZap} text="Immediate start available" color={PRIMARY_TEXT_COLOR} />
+                        <ListItem icon={FiBriefcase} text="Full-time & Internship roles" color="text-gray-300" />
+                        <ListItem icon={FiZap} text="Immediate start available" color="text-gray-300" />
                     </Card>
 
-                    {/* Card 2: Work Flexibility (Uses Secondary Highlight Color) */}
+                    {/* Card 2: Work Flexibility  */}
                     <Card
                         title="Work Flexibility"
-                        bgColor={darkCardBg}
+                        bgColor={lightCardBg}
                         icon={FiGlobe}
                         titleColor={darkCardIconColor}
                         iconBaseColor={darkCardIconColor}
@@ -84,10 +80,10 @@ const About = () => {
                         <ListItem icon={FiUsers} text="Adaptable to company needs" color="text-gray-300" />
                     </Card>
 
-                    {/* Card 3: Quick Details (Uses Secondary Highlight Color) */}
+                    {/* Card 3: Quick Details  */}
                     <Card
                         title="Quick Details"
-                        bgColor={darkCardBg}
+                        bgColor={lightCardBg}
                         icon={FiUsers}
                         titleColor={darkCardIconColor}
                         iconBaseColor={darkCardIconColor}

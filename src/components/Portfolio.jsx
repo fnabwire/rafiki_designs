@@ -176,7 +176,7 @@ export default function Portfolio() {
   }, {});
 
   return (
-    <section id="portfolio-gallery" className="bg-gray-100 p-8 md:p-12 rounded-xl max-w-7xl mx-auto my-10 shadow-lg">
+    <section id="portfolio-gallery" className="bg-gray-100 p-8 md:p-12 rounded-xl max-w-7xl mx-auto mt-0 mb-10 shadow-lg">
       
       {/* Category Buttons */}
       <div className="flex justify-center gap-3 flex-wrap mb-10">

@@ -75,7 +75,13 @@ const HeroSection = () => {
                   className="px-3 py-1 text-xs rounded-md font-medium shadow-sm"
                   style={{ backgroundColor: `${SECONDARY_COLOR_HEX}1A`, color: SECONDARY_COLOR_HEX }}
                 >
-                  Digital Marketing
+                  Brand Design
+                </li>
+                <li 
+                  className="px-3 py-1 text-xs rounded-md font-medium shadow-sm"
+                  style={{ backgroundColor: `${SECONDARY_COLOR_HEX}1A`, color: SECONDARY_COLOR_HEX }}
+                >
+                  Company Profile Design
                 </li>
               </ul>
             </div>

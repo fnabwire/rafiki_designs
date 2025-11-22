@@ -7,15 +7,15 @@ const Footer = () => {
 
   return (
     
-    <footer className={`bg-[${SECONDARY_COLOR}] text-white py-10 rounded-t-xl mt-8`}>
-      <div className="container mx-auto px-6 max-w-7xl">
+    <footer className={`bg-white/95 backdrop-blur-sm text-gray-800 py-3 rounded-t-xl`}>
+      <div className="container mx-auto px-8 max-w-7xl">
         <div className="text-center">
           {/* Company Name */}
           <div className="text-3xl font-extrabold mb-4 tracking-wider">Rafiki Designs</div>
-          <p className="text-white mb-8 opacity-90">Creating beautiful designs that make a difference</p>
+          <p className="mb-8 opacity-90">Creating beautiful designs that make a difference</p>
           
           {/* Navigation Links */}
-          <div className="flex justify-center space-x-6 mb-8 text-lg font-medium">
+          <div className="flex justify-center space-x-6 mb-4 text-lg font-medium">
             
             <a href="#" className={`hover:text-[${PRIMARY_COLOR}] transition-colors duration-300`}>Home</a>
             <a href="#about" className={`hover:text-[${PRIMARY_COLOR}] transition-colors duration-300`}>About</a>
@@ -25,7 +25,7 @@ const Footer = () => {
           </div>
           
           {/* Copyright */}
-          <p className="text-white opacity-70 text-sm mt-6">© 2025 Rafiki Designs. All rights reserved.</p>
+          <p className="opacity-70 text-sm mt-6">© 2025 Rafiki Designs. All rights reserved.</p>
         </div>
       </div>
     </footer>

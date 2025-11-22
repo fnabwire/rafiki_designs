@@ -1,5 +1,4 @@
 import React from 'react';
-import Portfolio from './Portfolio';
 import image55 from '../images/image55.jpeg';
 import image70 from '../images/image70.jpeg';
 import kijaniprofile from '../images/kijaniprofile.png';
@@ -63,7 +62,7 @@ const PortfolioSection = () => {
               <img 
                 src={project.imagePlaceholder} 
                 alt={project.title} 
-                className="w-full h-65 object-cover" 
+                className="w-full h-63 object-cover" 
               />
               <div className="p-6">
                 
@@ -85,7 +84,7 @@ const PortfolioSection = () => {
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        {/* <div className="text-center mt-12">
             <a 
                 href="#Portfolio"             
                 
@@ -93,7 +92,7 @@ const PortfolioSection = () => {
             >
                 Explore All Projects
             </a>
-        </div>
+        </div> */}
 
       </div>
     </section>
