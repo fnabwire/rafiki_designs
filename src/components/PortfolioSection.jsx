@@ -1,7 +1,7 @@
 import React from 'react';
 import image55 from '../images/image55.jpeg';
 import image70 from '../images/image70.jpeg';
-import kijaniprofile from '../images/kijaniprofile.png';
+import kijaniprofile from '../images/KijaniProfile.png';
 
 const projects = [
   {
