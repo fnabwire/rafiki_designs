@@ -12,7 +12,7 @@ function NavBar() {
         <div className="hidden md:flex space-x-6">
           <a href="#about" className="hover:text-[#0E97B9] transition duration-300">Home</a>
           <a href="#portfolio" className="hover:text-[#0E97B9] transition duration-300">Portfolio</a>
-          <a href="#contact" className="hover:text-[#0E97B9] transition duration-300">Contact</a>
+          <a href="#contact" className="hover:text-[#0E97B9] transition duration-300">ContactSection</a>
         </div>
         <div className="md:hidden">
           <button onClick={() => setIsOpen(!isOpen)} className="text-white focus:outline-none">
@@ -30,7 +30,7 @@ function NavBar() {
         <div className="md:hidden mt-2">
           <a href="#about" className="block py-2 px-4 hover:bg-[#0E97B9] transition duration-300">About</a>
           <a href="#portfolio" className="block py-2 px-4 hover:bg-[#0E97B9] transition duration-300">Portfolio</a>
-          <a href="#contact" className="block py-2 px-4 hover:bg-[#0E97B9] transition duration-300">Contact</a>
+          <a href="#contact" className="block py-2 px-4 hover:bg-[#0E97B9] transition duration-300">ContactSection</a>
         </div>
       )}
     </nav>
