@@ -25,7 +25,7 @@ const Footer = () => {
           </div>
           
           {/* Copyright */}
-          <p className="opacity-70 text-sm mt-6">© 2025 Rafiki Designs. All rights reserved.</p>
+          <p className="opacity-70 text-sm mt-6">© {new Date().getFullYear()} Rafiki Designs. All rights reserved.</p>
         </div>
       </div>
     </footer>
