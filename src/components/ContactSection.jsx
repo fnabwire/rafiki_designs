@@ -10,7 +10,7 @@ const ContactSection = () => {
     
     <section 
       id="ContactSection" 
-      className={`bg-[${PRIMARY_COLOR}] text-white pt-10 pb-0 flex flex-col items-center text-center`}
+      className={`bg-[${PRIMARY_COLOR}] text-white pt-10 pb-10 flex flex-col items-center text-center`}
     >
       <div className="w-full">
         <div 
