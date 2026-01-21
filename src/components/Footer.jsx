@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="text-center">
           {/* Company Name */}
           <div className="text-3xl font-extrabold mb-4 tracking-wider">Rafiki Designs</div>
-          <p className="mb-8 opacity-90">Creating beautiful designs that make a difference</p>
+          {/* <p className="mb-8 opacity-90">Creating beautiful designs that make a difference</p> */}
           
           {/* Navigation Links */}
           <div className="flex justify-center space-x-6 mb-4 text-lg font-medium">
