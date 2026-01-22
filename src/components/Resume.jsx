@@ -1,4 +1,4 @@
-import React from "react";
+
 
 const experiences = [
   {
@@ -70,7 +70,7 @@ const Resume = () => {
         <div className="flex justify-center gap-4 mt-8">
           <a
             className="px-6 py-2 bg-primary text-white rounded-md font-semibold transition-all duration-300 hover:bg-secondary"
-            href="https://drive.google.com/file/d/1Xki5QFwDpzc9czcjevyIx59olIsApLRC/view?usp=drivesdk"
+            href="/JOHN JUMA_CV.pdf"
             download="JOHN JUMA_CV.pdf"
             target="_blank"
             rel="noopener noreferrer"
